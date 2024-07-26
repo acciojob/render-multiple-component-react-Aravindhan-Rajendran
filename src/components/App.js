@@ -10,16 +10,18 @@ const projects = [
   { name: "Project5", description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." },
   { name: "Project6", description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." }
 ];
-const App=()=>{
-  return(
+
+const App = () => {
+  return (
     <div id="main" className="ns-wrapper">
-    {projects.map((project,index)=>{
-    <div key={index}>
-                  <h1 data-ns-test={`project-name-${index+1}`}>{projects.name}</h1>
-                  <p data-ns-test={`project-description-${index+1}`>{projects.description}</p>
-                  </div>
-    })}
+      {projects.map((project, index) => (
+        <div key={index}>
+          <h1 data-ns-test={`project-name-${index + 1}`}>{project.name}</h1>
+          <p data-ns-test={`project-description-${index + 1}`}>{project.description}</p>
+        </div>
+      ))}
     </div>
   );
 }
+
 export default App;
