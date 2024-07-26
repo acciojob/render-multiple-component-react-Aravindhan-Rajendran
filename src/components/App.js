@@ -16,8 +16,8 @@ const App = () => {
     <div id="main" className="ns-wrapper">
       {projects.map((project, index) => (
         <div key={index}>
-          <h1 data-ns-test={`project-name-${index + 1}`}>{project.name}</h1>
-          <p data-ns-test={`project-description-${index + 1}`}>{project.description}</p>
+          <h1 `[data-ns-test='project-name']`>{project.name}</h1>
+          <p `[data-ns-test='project-description']`>{project.description}</p>
         </div>
       ))}
     </div>
